@@ -30,7 +30,8 @@ export default function TabLayout() {
           shadowColor: "transparent",
         },
         headerTitleStyle: {
-          fontSize: 24,
+          fontSize: 26,
+          fontWeight: "bold",
         },
         headerTitleAlign: "center",
         headerShown: useClientOnlyValue(false, true),
