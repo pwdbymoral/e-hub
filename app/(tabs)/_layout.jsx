@@ -23,8 +23,12 @@ export default function TabLayout() {
           height: 60,
         },
         headerTintColor: "#E9D62D",
-        headerTransparent: true,
         headerTitle: "E-hub",
+        headerStyle: {
+          backgroundColor: "#0C163C",
+          borderBottomWidth: 0,
+          shadowColor: "transparent",
+        },
         headerTitleStyle: {
           fontSize: 24,
         },
@@ -40,20 +44,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="news"
-        options={{
-          title: "Notícias",
-          tabBarIcon: ({ color }) => (
-            <TabBarIcon name="newspaper-o" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="matches"
         options={{
           title: "Partidas",
           tabBarIcon: ({ color }) => (
             <TabBarIcon name="gamepad" color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="news"
+        options={{
+          title: "Notícias",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="newspaper-o" color={color} />
           ),
         }}
       />
