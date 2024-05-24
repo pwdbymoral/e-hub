@@ -26,7 +26,8 @@ export default function TabLayout() {
         headerTitle: "E-hub",
         headerStyle: {
           backgroundColor: "#0C163C",
-          borderBottomWidth: 0,
+          borderBottomWidth: 2,
+          borderBottomColor: "#2F395C",
           shadowColor: "transparent",
         },
         headerTitleStyle: {
