@@ -1,12 +1,15 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import React from "react";
-import Main from "../../components/Main";
+import NewsCard from "../../components/NewsCard";
+import HomeNews from "../../components/HomeNews";
 
 const home = () => {
   return (
-    <View className="flex-1 items-center justify-center bg-primary">
-      <Text className="text-white">home</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView className="bg-primary">
+        <HomeNews />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
