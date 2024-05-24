@@ -2,13 +2,13 @@ import { View, Text } from "react-native";
 import React from "react";
 import NewsCard from "./NewsCard";
 
-const HomeNews = () => {
+const HomeNews = ({ newsList }) => {
   return (
-    <View className="mx-auto flex-col space-y-4 w-2/3">
-      <Text className="text-white text-2xl font-bold">Notícias da Semana</Text>
-      <NewsCard />
-      <NewsCard />
-      <NewsCard />
+    <View className="mx-auto my-2 flex-col space-y-4 w-10/12">
+      <Text className="text-white text-2xl font-bold">Principais Notícias</Text>
+      {newsList.map((news) => (
+        <NewsCard news={news} key={news.title} />
+      ))}
     </View>
   );
 };
