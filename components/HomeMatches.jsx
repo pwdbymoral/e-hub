@@ -6,8 +6,10 @@ const HomeMatches = ({ matches }) => {
   return (
     <View className="mx-auto my-2 flex-col w-10/12">
       <View className="flex flex-row flex-wrap justify-center">
-        {matches.map((match) => (
-          <Match key={match.date} match={match} />
+        {matches.map((match, index) => (
+          <View key={index} className="w-1/2 p-1">
+            <Match match={match} />
+          </View>
         ))}
       </View>
     </View>
