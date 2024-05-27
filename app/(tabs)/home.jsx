@@ -2,12 +2,14 @@ import { SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import HomeNews from "../../components/HomeNews";
 import HomeMatches from "../../components/HomeMatches";
+import Standings from "../../components/Standings";
 
 const home = () => {
   return (
     <SafeAreaView>
       <ScrollView className="bg-primary">
         <HomeMatches matches={placeholderMatches} />
+        <Standings teams={placeholderTeams} />
         <HomeNews newsList={placeholderNews} />
       </ScrollView>
     </SafeAreaView>
@@ -16,7 +18,7 @@ const home = () => {
 
 const placeholderMatches = [
   {
-    date: "2022-01-01",
+    date: "2024-05-16",
     competition: "Premier League",
     leagueImage: "",
     homeTeamImage: "",
@@ -25,12 +27,30 @@ const placeholderMatches = [
     awayTeamScore: "2",
   },
   {
-    date: "2022-01-02",
+    date: "2024-05-17",
     competition: "League Cup",
     leagueImage: "",
     homeTeamImage: "",
     awayTeamImage: "",
     homeTeamScore: "3",
+    awayTeamScore: "1",
+  },
+  {
+    date: "2024-05-18",
+    competition: "League Cup",
+    leagueImage: "",
+    homeTeamImage: "",
+    awayTeamImage: "",
+    homeTeamScore: "3",
+    awayTeamScore: "0",
+  },
+  {
+    date: "2024-05-18",
+    competition: "League Cup",
+    leagueImage: "",
+    homeTeamImage: "",
+    awayTeamImage: "",
+    homeTeamScore: "2",
     awayTeamScore: "1",
   },
 ];
@@ -56,6 +76,26 @@ const placeholderNews = [
     autor: "ESL Announcer",
     hour: "2021-08-15T15:30:00Z",
   },
+];
+
+const placeholderTeams = [
+  {
+    position: 1,
+    name: "RED",
+    logo: "https://example.com/team-a-logo.png",
+    points: 10,
+    victories: 5,
+    defeats: 3,
+  },
+  {
+    position: 2,
+    name: "INTZ",
+    logo: "https://example.com/team-b-logo.png",
+    points: 8,
+    victories: 4,
+    defeats: 4,
+  },
+  // Add more teams as needed
 ];
 
 export default home;
