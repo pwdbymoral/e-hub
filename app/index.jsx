@@ -1,14 +1,40 @@
 import React from "react";
-import { Redirect } from "expo-router";
-import { Text, View } from "react-native";
+import { Link, Redirect, router } from "expo-router";
+import { Text, View, Image } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import CustomBttn from "../components/CustomBttn";
 
 const index = () => {
   return (
-    <View className="bg-primary flex-1 items-center justify-center h-screen">
-      <Text className="text-accent text-4xl font-bold">E-hub</Text>
-      <Redirect href="/(tabs)/home" />
-    </View>
-  );
-};
+      <SafeAreaView className="bg-primary h-full">
+          <View className="w-full justify-top items-center h-full px-4">
+              <Image 
+                  source={require("../assets/images/Logo_hub.png")}
+                  className="w-[180px] h-[144px] mt-20"
+                  resizeMode="contain"
+              />
+              <View className="relative mt-2">
+                <Text className="text-white text-xl font-regular text-center">Seu{' '}
+                    <Text className="text-accent text-2xl font-bold">Hub</Text> 
+                {' '}para tudo de</Text>
+                <Text className="text-accent text-3xl font-extrabold text-center">E - Sports</Text>
+              </View>
+
+                <CustomBttn
+                    title="Login"
+                    handlePress={() => router.push("/login")}
+                    containerStyles="w-full h-[56px] mt-64"
+                />
+                <CustomBttn
+                    title="cadastro"
+                    handlePress={() => router.push("/cadastro")}
+                    containerStyles="w-full mt-4"
+                />
+                <Link href={"misc/terms"} className={`text-white opacity-25 text-sm mt-5`}> Termos de uso e privacidade</Link>
+          </View>
+          
+      </SafeAreaView>
+  )
+}
 
 export default index;
